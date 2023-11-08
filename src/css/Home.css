@@ -1,5 +1,5 @@
 .bg-image{
-    width: 100vw;
+    width: 99vw;
     position: absolute;
 }
 .logo{
@@ -120,7 +120,7 @@ line-height: 150%;
     background-color: #F44E77;
     padding: 16px 30px;
     margin-top: 5px;
-    width: 150px;
+    width: 100px;
     border: none;
     border-radius: 80px;
     font-family: Roboto;
@@ -128,13 +128,13 @@ font-size: 13px;
 font-style: normal;
 font-weight: 400;
 position: relative;
-left: 71%;
+left: 79%;
 cursor: pointer;
 }
 
 .shape1{
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     right: 42%;
     display: block;
 }
@@ -165,7 +165,7 @@ cursor: pointer;
         width: 90%;
     }
     .home{
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
     }
