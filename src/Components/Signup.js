@@ -1,35 +1,34 @@
 import Navbar from "../Components/Navbar"
-import "../css/Login.css";
+import "../css/Signup.css";
 import bg from "../Images/BackGround.svg";
 import rightarrow from "../Images/rightarrow.svg";
 import image from "../Images/signupImage.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-const Login = () => {
+const Signup = () => {
     const [email, setemail] = useState('');
     const [password, setPassword] = useState('');
-  
+    const [confirmpassword, setconfirmPassword] = useState('');
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        const details = { email, password };
+        const details = { email, password ,confirmpassword};
     
         console.log(details);
       }
 
-
     return ( 
-        <div className="login-body">
+        <div className="signup-body">
 <img src={bg} width="100%" className="bg-image"/>
-        <div className="main login">
+        <div className="main signup">
             {/* navbar */}
             <Navbar buttonClassName="custom-btn-class"/>
 <h1>Read reviews. Write reviews.<br></br> Find products.</h1>
-{/* login */}
-<div className="login-box">
-  {/* login-left */}
-<div className="login-left">
-<h4>Log in</h4>
+{/* signup */}
+<div className="signup signup-box">
+  {/* signup-left */}
+<div className="signup-left">
+<h4>Sign up</h4>
 <form onSubmit={handleSubmit}>
             <label>Email</label>
             <input 
@@ -49,12 +48,21 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <p>Don’t have an account?  <Link to="/signup"><span>Sign up!</span></Link></p>
-            <button className="login-btn">Log in <img src={rightarrow}/></button>
+            <label>Confirm Password</label>
+            <input 
+            className="password"
+            placeholder='combination of letter, symbols and numericals'
+              type="password" 
+              required 
+              value={confirmpassword}
+              onChange={(e) => setconfirmPassword(e.target.value)}
+            />
+            <p>Already have an account?  <Link to="/login"><span>Log in!</span></Link></p>
+            <button className="signup-btn">Sign up </button>
             </form>
 </div>
-{/* login-right */}
-<div className="login-right">
+{/* signup-right */}
+<div className="signup-right">
 <img src={image}/>
 </div>
 </div>
@@ -63,4 +71,4 @@ const Login = () => {
      );
 }
  
-export default Login;
+export default Signup;

@@ -1,20 +1,13 @@
 // Navbar.js
 import "../css/Navbar.css";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../Images/logo.svg";
 
-const Navbar = ({ buttonText, buttonImage, buttonClassName }) => {
-  const [menuOpen, setMenuOpen] = useState(false);//for responsive nav
-  const navigate = useNavigate(); // useNavigate hook for navigation
-//for responsive nav
+const Navbar = ({ buttonText, buttonImage, buttonClassName ,click}) => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-  };
-// for navigation
-  const handleLoginClick = () => {
-    navigate("/login");
-    setMenuOpen(false);
   };
 
   return (
@@ -27,13 +20,15 @@ const Navbar = ({ buttonText, buttonImage, buttonClassName }) => {
             <li>Features</li>
             <li>About</li>
           </ul>
+          <Link to={`/${click}`}>
           <button
             className={`register-btn ${buttonClassName}`}
-            onClick={handleLoginClick}
+            
           >
             {buttonText}
             {buttonImage && <img src={buttonImage} alt="Arrow" />}
           </button>
+            </Link>
         </div>
         <div
           className={`hamburger-menu ${menuOpen ? "active" : ""}`}

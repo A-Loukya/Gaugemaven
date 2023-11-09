@@ -8,16 +8,15 @@ import homeImg from "../Images/home-images.svg";
 import shape1 from "../Images/Shape1.svg";
 import shape2 from "../Images/Shape 2.svg";
 import shape3 from "../Images/Shape 3.svg";
-import Login from "./Login";
 import Categories from "./Categories";
 
-const Home = ({ onLoginClick, showLogin }) => {
+const Home = () => {
   return (
     <div>
       <img src={bg} className="bg-image" />
       <div className="main">
         {/* navbar */}
-        <Navbar buttonText="Log in" buttonImage={arrowRight} onLoginClick={onLoginClick} />
+        <Navbar buttonText="Log in" buttonImage={arrowRight} click="login"/>
 
         {/* home section */}
         <section>
@@ -43,7 +42,6 @@ const Home = ({ onLoginClick, showLogin }) => {
           </div>
         </section>
       </div>
-      {showLogin && <Login />}
       <Categories/>
     </div>
   );
