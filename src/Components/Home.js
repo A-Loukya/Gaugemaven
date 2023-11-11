@@ -9,6 +9,8 @@ import shape1 from "../Images/Shape1.svg";
 import shape2 from "../Images/Shape 2.svg";
 import shape3 from "../Images/Shape 3.svg";
 import Categories from "./Categories";
+import Features from "./Features";
+import Faq from "./Faq";
 
 const Home = () => {
   return (
@@ -43,6 +45,8 @@ const Home = () => {
         </section>
       </div>
       <Categories/>
+      <Features/>
+      <Faq/>
     </div>
   );
 };

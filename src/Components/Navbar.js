@@ -16,8 +16,12 @@ const Navbar = ({ buttonText, buttonImage, buttonClassName ,click}) => {
         <div className={`navbar ${menuOpen ? "active" : ""}`}>
           <img src={logo} className="logo" />
           <ul>
+            <a href="#categories">
             <li>Categories</li>
+            </a>
+            <a href="#features">
             <li>Features</li>
+            </a>
             <li>About</li>
           </ul>
           <Link to={`/${click}`}>

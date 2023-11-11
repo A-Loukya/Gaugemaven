@@ -51,7 +51,7 @@ const Signup = () => {
             <label>Confirm Password</label>
             <input 
             className="password"
-            placeholder='combination of letter, symbols and numericals'
+            placeholder='Re enter password'
               type="password" 
               required 
               value={confirmpassword}

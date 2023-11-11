@@ -23,7 +23,7 @@ const Categories = () => {
     };
   
     return ( 
-        <div className="categories main">
+        <div className="categories main" id="categories">
             <h2>Explore Categories</h2>
             {/* carousel buttons */}
             <div className="carousel-btns">
