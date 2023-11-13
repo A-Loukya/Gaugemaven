@@ -8,7 +8,11 @@ import luggage from "../Images/luggage.svg";
 import sports from "../Images/sports.svg";
 import toys from "../Images/toys.svg";
 import React, { useState } from "react";
-const Categories = () => {
+import { Link } from "react-router-dom";
+const Categories = ({click}) => {
+    // const [navigate,setNavigate]=useState('');
+    // navigate={onclick}
+    // if(navigate==)
 // carousel logic
     const [currentSlide, setCurrentSlide] = useState(0);
     const cardWidth = 260; 
@@ -40,20 +44,24 @@ const Categories = () => {
       <div className="carousel1" style={{ transform: `translateX(-${currentSlide * cardWidth}px)` }}>
         {/* carousel mapping for data-1 */}
         {data1.map((d, index) => (
+                <Link to= {`/${click}`}>
           <div className="card" key={index}>
             <img src={d.image} alt={d.title} />
             <h4>{d.title}</h4>
           </div>
+          </Link>
         ))}
       </div>
       {/* carousel-2 */}
       <div className="carousel2" style={{ transform: `translateX(-${currentSlide * cardWidth}px)` }}>
         {/* carousel mapping for data 2 */}
         {data2.map((d, index) => (
+             <Link to= {`/${click}`}>
           <div className="card" key={index}>
             <img src={d.image} alt={d.title} />
             <h4>{d.title}</h4>
           </div>
+        </Link>
         ))}
       </div>
     </div>

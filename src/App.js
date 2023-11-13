@@ -6,6 +6,9 @@ import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import Features from "./Components/Features";
 import Faq from "./Components/Faq";
+import Dashboard from "./Components/Dashboard";
+import MainCategories from "./Components/MainCategories";
+import Profile from "./Components/Profile"
 function App() {
 
   return (
@@ -18,6 +21,9 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/features" element={<Features />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/Mcategories" element={<MainCategories />} />
         </Routes>
       </div>
     </Router>

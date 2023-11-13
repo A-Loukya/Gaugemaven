@@ -23,6 +23,7 @@ margin-right: 30px;
 transition: transform 0.3s;
 }
 .card h4{
+  color: black;
     font-family: Roboto;
 font-size: 20px;
 font-style: normal;

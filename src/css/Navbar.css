@@ -5,7 +5,7 @@
     display: flex;
     position: relative;
     justify-content: space-between;
-    padding: 50px 0;
+    width: 100%;
 }
 .navbar ul{
     display: flex;
@@ -24,6 +24,9 @@ li:hover{
     opacity: 0.8;
 }
 .register-btn{
+    display: flex;
+    flex-direction: row;
+    color: white;
     text-align: center;
     align-items: center;
     display: flex;

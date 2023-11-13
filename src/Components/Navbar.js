@@ -4,15 +4,15 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../Images/logo.svg";
 
-const Navbar = ({ buttonText, buttonImage, buttonClassName ,click}) => {
+const Navbar = ({ buttonText, buttonImage, buttonClassName ,click,imageSize}) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <div className="">
-      <navbar>
+    <div >
+      <nav>
         <div className={`navbar ${menuOpen ? "active" : ""}`}>
           <img src={logo} className="logo" />
           <ul>
@@ -30,7 +30,7 @@ const Navbar = ({ buttonText, buttonImage, buttonClassName ,click}) => {
             
           >
             {buttonText}
-            {buttonImage && <img src={buttonImage} alt="Arrow" />}
+            {buttonImage && <img src={buttonImage} alt="Arrow"  style={{ width: imageSize, height: 'auto' }} />}
           </button>
             </Link>
         </div>
@@ -42,7 +42,7 @@ const Navbar = ({ buttonText, buttonImage, buttonClassName ,click}) => {
           <div className="bar"></div>
           <div className="bar"></div>
         </div>
-      </navbar>
+      </nav>
     </div>
   );
 };

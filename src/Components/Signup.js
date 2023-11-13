@@ -4,17 +4,23 @@ import bg from "../Images/BackGround.svg";
 import rightarrow from "../Images/rightarrow.svg";
 import image from "../Images/signupImage.svg";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Signup = () => {
     const [email, setemail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmpassword, setconfirmPassword] = useState('');
+    const navigate = useNavigate();
     
     const handleSubmit = (e) => {
         e.preventDefault();
         const details = { email, password ,confirmpassword};
-    
         console.log(details);
+        if (details) {
+          navigate('/dashboard');
+        } else {
+          // Handle validation errors if needed
+          console.log('Please fill in the details');
+        }
       }
 
     return ( 

@@ -4,17 +4,22 @@ import bg from "../Images/BackGround.svg";
 import rightarrow from "../Images/rightarrow.svg";
 import image from "../Images/signupImage.svg";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
     const [email, setemail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
   
     
     const handleSubmit = (e) => {
         e.preventDefault();
         const details = { email, password };
-    
         console.log(details);
+        if (details) {
+          navigate('/dashboard');
+        } else {
+          console.log('Please fill in the details');
+        }
       }
 
 
@@ -50,7 +55,9 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <p>Don’t have an account?  <Link to="/signup"><span>Sign up!</span></Link></p>
+            {/* <Link to="/dashboard"> */}
             <button className="login-btn">Log in <img src={rightarrow}/></button>
+            {/* </Link> */}
             </form>
 </div>
 {/* login-right */}

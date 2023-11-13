@@ -1,4 +1,3 @@
-// Home.js
 import React from "react";
 import Navbar from "./Navbar";
 import "../css/Home.css";
@@ -11,17 +10,20 @@ import shape3 from "../Images/Shape 3.svg";
 import Categories from "./Categories";
 import Features from "./Features";
 import Faq from "./Faq";
+import profileImg from "../Images/profile-img.png";
+import "../css/Dashboard.css"
 import { Link } from "react-router-dom";
-// import Profile from "./Profile";
-// import MainCategories from "./MainCategories";
+const Dashboard = () => {
 
-const Home = () => {
-  return (
-    <div>
-      <img src={bg} className="bg-image" />
+    // name extracted from email
+const name="Jennifer laurence"
+
+    return ( 
+        <div>
+            <img src={bg} className="bg-image" />
       <div className="main">
         {/* navbar */}
-        <Navbar buttonText="Log in" buttonImage={arrowRight} click="login" buttonClassName="register-btn"/>
+        <Navbar buttonText={name} buttonImage={profileImg} click="profile" buttonClassName="custom-profile-class" imageSize={50}/>
 
         {/* home section */}
         <section>
@@ -33,9 +35,9 @@ const Home = () => {
                 and writing reviews.
               </p>
               <form className="search-form">
-                <Link to="/login">
+                
                 <input type="text" placeholder="Search for any product..." className="search-box" />
-                </Link>
+               
                 <button className="search-btn">Search</button>
               </form>
             </div>
@@ -49,15 +51,14 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <Categories click="login"/>
+      <Categories click="Mcategories" />
       <Features/>
       <Faq/>
 
 
-      {/* <Profile/> */}
-      {/* <MainCategories/> */}
+     
     </div>
-  );
-};
-
-export default Home;
+     );
+}
+ 
+export default Dashboard;
