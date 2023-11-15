@@ -1,16 +1,81 @@
-import "../css/Maincategories.css";
-import logo from "../Images/logo.svg";
-import bg from "../Images/BackGround.svg";
-import Smartphone from "../Images/Smartphone.svg";
-import profile from "../Images/profile-img.png";
+import React from "react";
 import { Link } from "react-router-dom";
+import products from "./Categories.json";
+import "../css/Maincategories.css";
+import bg from "../Images/BackGround.svg";
+import logo from "../Images/logo.svg";
+import profile from "../Images/profile-img.png";
+import Smartphone from "../Images/Smartphone.svg";
+import automotives from "../Images/automotives.svg"
+import bags from "../Images/bags.svg"
+import fragrances from "../Images/fragrances.svg"
+import furniture from "../Images/furniture.svg"
+import groceries from "../Images/groceries.svg"
+import homedecor from "../Images/homedecor.svg"
+import jewellery from "../Images/jewellery.svg"
+import laptop from "../Images/laptops.svg"
+import light from "../Images/light.svg"
+import sunglasses from "../Images/sunglasses.svg"
+import watches from "../Images/watches.svg"
+
 const MainCategories = () => {
+  const productImages = [
+    {
+      id: 1,
+      images: [automotives],
+    },
+    {
+      id: 2,
+      images: [fragrances],
+    },
+    {
+      id: 3,
+      images: [furniture],
+    },
+    {
+      id: 4,
+      images: [groceries],
+    },
+    {
+      id: 5,
+      images: [homedecor],
+    },
+    {
+      id: 6,
+      images: [light],
+    },
+    {
+      id: 7,
+      images: [laptop],
+    },
+    {
+      id: 8,
+      images: [Smartphone],
+    },
+    {
+      id: 9,
+      images: [sunglasses],
+    },
+    {
+      id: 10,
+      images: [watches],
+    },
+    {
+      id: 11,
+      images: [bags],
+    },
+    {
+      id: 12,
+      images: [jewellery],
+    },
+  ];
+
   return (
     <div>
       <img src={bg} width="100%" className="bg-image" />
       <div className="Mcategories main">
         <nav>
-          <img src={logo} />
+          <img src={logo} alt="Logo" />
           <input
             type="text"
             placeholder="Search for any product"
@@ -18,7 +83,7 @@ const MainCategories = () => {
           />
 
           <div className="profile">
-            <img src={profile} />
+            <img src={profile} alt="Profile" />
             <p>Jennifer Lawrence</p>
           </div>
         </nav>
@@ -27,9 +92,8 @@ const MainCategories = () => {
         </div>
         <h3>What are you looking for?</h3>
 
-        {/* <h4>Explore companies by category</h4> */}
         <div className="c-boxes">
-          {products.map((product) => (
+          {products.map((product, index) => (
             <Link
               key={product.id}
               to={{
@@ -37,8 +101,18 @@ const MainCategories = () => {
                 state: { productN: product.category },
               }}
             >
-              <div className="c-details">
-                <img src={product.image} />
+              <div className="c-details" key={product.id}>
+                {Array.isArray(productImages[index]?.images) ? (
+                  productImages[index].images.map((imageUrl, imageIndex) => (
+                    <img
+                      key={imageIndex}
+                      src={imageUrl}
+                      alt={`Product ${imageIndex + 1}`}
+                    />
+                  ))
+                ) : (
+                  <p>No images available for this product.</p>
+                )}
                 <h5>{product.category}</h5>
                 <hr />
                 <p>{product.product1}</p>
@@ -55,46 +129,4 @@ const MainCategories = () => {
   );
 };
 
-const products = [
-  {
-    id: 1,
-    image: Smartphone,
-    category: "Smartphones",
-    product1: "Apple iphone13",
-    product2: "Apple iphone13",
-    product3: "Apple iphone13",
-    product4: "Apple iphone13",
-    product5: "Apple iphone13",
-  },
-  {
-    id: 2,
-    image: Smartphone,
-    category: "Groceries",
-    product1: "Apple iphone13",
-    product2: "Apple iphone13",
-    product3: "Apple iphone13",
-    product4: "Apple iphone13",
-    product5: "Apple iphone13",
-  },
-  {
-    id: 3,
-    image: Smartphone,
-    category: "Fragrances",
-    product1: "Apple iphone13",
-    product2: "Apple iphone13",
-    product3: "Apple iphone13",
-    product4: "Apple iphone13",
-    product5: "Apple iphone13",
-  },
-  {
-    id: 4,
-    image: Smartphone,
-    category: "laptops",
-    product1: "Apple iphone13",
-    product2: "Apple iphone13",
-    product3: "Apple iphone13",
-    product4: "Apple iphone13",
-    product5: "Apple iphone13",
-  },
-];
 export default MainCategories;
