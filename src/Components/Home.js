@@ -21,7 +21,12 @@ const Home = () => {
       <img src={bg} className="bg-image" />
       <div className="main">
         {/* navbar */}
-        <Navbar buttonText="Log in" buttonImage={arrowRight} click="login" buttonClassName="register-btn"/>
+        <Navbar
+          buttonText="Log in"
+          buttonImage={arrowRight}
+          click="login"
+          buttonClassName="register-btn"
+        />
 
         {/* home section */}
         <section>
@@ -29,12 +34,16 @@ const Home = () => {
             <div className="home-left">
               <h1>Find products you can trust.</h1>
               <p>
-                <span>Gaugemaven</span> is a revolutionary platform built to help you find trusted products by reading
-                and writing reviews.
+                <span>Gaugemaven</span> is a revolutionary platform built to
+                help you find trusted products by reading and writing reviews.
               </p>
               <form className="search-form">
                 <Link to="/login">
-                <input type="text" placeholder="Search for any product..." className="search-box" />
+                  <input
+                    type="text"
+                    placeholder="Search for any product..."
+                    className="search-box"
+                  />
                 </Link>
                 <button className="search-btn">Search</button>
               </form>
@@ -49,10 +58,9 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <Categories click="login"/>
-      <Features/>
-      <Faq/>
-
+      <Categories click="login" />
+      <Features />
+      <Faq />
 
       {/* <Profile/> */}
       {/* <MainCategories/> */}

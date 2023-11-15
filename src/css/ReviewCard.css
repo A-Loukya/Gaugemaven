@@ -1,0 +1,103 @@
+.review-card {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 25px 50px 0px rgba(22, 25, 79, 0.15);
+  width: 95%;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.review-profile {
+  display: flex;
+  align-items: center;
+}
+.review-profile p {
+  color: var(--secondary-dark, #16194f);
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 25.5px */
+  margin: 0;
+  margin-bottom: 3px;
+}
+.review-profile span {
+  color: var(--Secondary, #6a6d9e);
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 22.5px */
+}
+.reviewProfile-img {
+  width: 60px;
+  height: 60px;
+  align-self: center;
+  margin-right: 10px;
+}
+.reviewc-loctaion {
+  display: flex;
+  align-items: center;
+}
+.reviewc-loctaion img {
+  margin-right: 3px;
+}
+.hr1 {
+  margin: 20px 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.4);
+}
+.review-title {
+  margin: 20px 0 10px 0;
+  color: #000;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 36px */
+}
+.review-text {
+  margin: 10px 0;
+  color: #3a3a3a;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+}
+.review-date {
+  color: #000;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 25.5px */
+  margin: 10px 0 20px 0;
+}
+.review-date span {
+  color: #000;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.like-btn {
+  background-color: white;
+  border: none;
+}
+.like-btn:hover {
+  cursor: pointer;
+}
+.like {
+  display: flex;
+  align-items: center;
+}
+.like span {
+  color: rgba(58, 58, 58, 0.8);
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+}

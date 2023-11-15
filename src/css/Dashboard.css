@@ -1,12 +1,11 @@
-.custom-profile-class{
-    display: flex;
-    flex-direction: row-reverse !important;
-    font-family: Roboto;
-font-size: 17px !important;
-font-style: normal;
-font-weight: 400;
-background: none;
-width: 250px;
-justify-content: space-evenly;
-
+.custom-profile-class {
+  display: flex;
+  flex-direction: row-reverse !important;
+  font-family: Roboto;
+  font-size: 17px !important;
+  font-style: normal;
+  font-weight: 400;
+  background: none;
+  width: 250px;
+  justify-content: space-evenly;
 }

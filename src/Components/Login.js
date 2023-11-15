@@ -1,4 +1,4 @@
-import Navbar from "../Components/Navbar"
+import Navbar from "../Components/Navbar";
 import "../css/Login.css";
 import bg from "../Images/BackGround.svg";
 import rightarrow from "../Images/rightarrow.svg";
@@ -6,68 +6,75 @@ import image from "../Images/signupImage.svg";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
-    const [email, setemail] = useState('');
-    const [password, setPassword] = useState('');
-    const navigate = useNavigate();
-  
-    
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const details = { email, password };
-        console.log(details);
-        if (details) {
-          navigate('/dashboard');
-        } else {
-          console.log('Please fill in the details');
-        }
-      }
+  const [email, setemail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const details = { email, password };
+    console.log(details);
+    if (details) {
+      navigate("/dashboard");
+    } else {
+      console.log("Please fill in the details");
+    }
+  };
 
-    return ( 
-        <div className="login-body">
-<img src={bg} width="100%" className="bg-image"/>
-        <div className="main login">
-            {/* navbar */}
-            <Navbar buttonClassName="custom-btn-class"/>
-<h1>Read reviews. Write reviews.<br></br> Find products.</h1>
-{/* login */}
-<div className="login-box">
-  {/* login-left */}
-<div className="login-left">
-<h4>Log in</h4>
-<form onSubmit={handleSubmit}>
-            <label>Email</label>
-            <input 
-            className="email"
-            placeholder='your@gmail.com'
-              type="text" 
-              required 
-              value={email}
-              onChange={(e) => setemail(e.target.value)}
-            />
-            <label>Password</label>
-            <input 
-            className="password"
-            placeholder='combination of letter, symbols and numericals'
-              type="password" 
-              required 
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <p>Don’t have an account?  <Link to="/signup"><span>Sign up!</span></Link></p>
-            {/* <Link to="/dashboard"> */}
-            <button className="login-btn">Log in <img src={rightarrow}/></button>
-            {/* </Link> */}
+  return (
+    <div className="login-body">
+      <img src={bg} width="100%" className="bg-image" />
+      <div className="main login">
+        {/* navbar */}
+        <Navbar buttonClassName="custom-btn-class" />
+        <h1>
+          Read reviews. Write reviews.<br></br> Find products.
+        </h1>
+        {/* login */}
+        <div className="login-box">
+          {/* login-left */}
+          <div className="login-left">
+            <h4>Log in</h4>
+            <form onSubmit={handleSubmit}>
+              <label>Email</label>
+              <input
+                className="email"
+                placeholder="your@gmail.com"
+                type="text"
+                required
+                value={email}
+                onChange={(e) => setemail(e.target.value)}
+              />
+              <label>Password</label>
+              <input
+                className="password"
+                placeholder="combination of letter, symbols and numericals"
+                type="password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <p>
+                Don’t have an account?{" "}
+                <Link to="/signup">
+                  <span>Sign up!</span>
+                </Link>
+              </p>
+              {/* <Link to="/dashboard"> */}
+              <button className="login-btn">
+                Log in <img src={rightarrow} />
+              </button>
+              {/* </Link> */}
             </form>
-</div>
-{/* login-right */}
-<div className="login-right">
-<img src={image}/>
-</div>
-</div>
+          </div>
+          {/* login-right */}
+          <div className="login-right">
+            <img src={image} />
+          </div>
         </div>
-        </div>
-     );
-}
- 
+      </div>
+    </div>
+  );
+};
+
 export default Login;

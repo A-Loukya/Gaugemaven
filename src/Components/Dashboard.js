@@ -11,19 +11,24 @@ import Categories from "./Categories";
 import Features from "./Features";
 import Faq from "./Faq";
 import profileImg from "../Images/profile-img.png";
-import "../css/Dashboard.css"
+import "../css/Dashboard.css";
 import { Link } from "react-router-dom";
 const Dashboard = () => {
+  // name extracted from email
+  const name = "Jennifer laurence";
 
-    // name extracted from email
-const name="Jennifer laurence"
-
-    return ( 
-        <div>
-            <img src={bg} className="bg-image" />
+  return (
+    <div>
+      <img src={bg} className="bg-image" />
       <div className="main">
         {/* navbar */}
-        <Navbar buttonText={name} buttonImage={profileImg} click="profile" buttonClassName="custom-profile-class" imageSize={50}/>
+        <Navbar
+          buttonText={name}
+          buttonImage={profileImg}
+          click="profile"
+          buttonClassName="custom-profile-class"
+          imageSize={50}
+        />
 
         {/* home section */}
         <section>
@@ -31,13 +36,16 @@ const name="Jennifer laurence"
             <div className="home-left">
               <h1>Find products you can trust.</h1>
               <p>
-                <span>Gaugemaven</span> is a revolutionary platform built to help you find trusted products by reading
-                and writing reviews.
+                <span>Gaugemaven</span> is a revolutionary platform built to
+                help you find trusted products by reading and writing reviews.
               </p>
               <form className="search-form">
-                
-                <input type="text" placeholder="Search for any product..." className="search-box" />
-               
+                <input
+                  type="text"
+                  placeholder="Search for any product..."
+                  className="search-box"
+                />
+
                 <button className="search-btn">Search</button>
               </form>
             </div>
@@ -52,13 +60,10 @@ const name="Jennifer laurence"
         </section>
       </div>
       <Categories click="Mcategories" />
-      <Features/>
-      <Faq/>
-
-
-     
+      <Features />
+      <Faq />
     </div>
-     );
-}
- 
+  );
+};
+
 export default Dashboard;
