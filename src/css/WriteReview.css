@@ -1,0 +1,72 @@
+.writeReview{
+    position: relative;
+}
+.review-box{
+    border-radius: 30px;
+background: rgba(255, 255, 255, 0.80);
+width: 87%;
+margin-top: 50px;
+padding: 80px;
+}
+.review-box h2{
+    color: var(--secondary-dark, #16194F);
+font-family: Roboto;
+font-size: 50px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 75px */
+margin: 0px;
+margin-bottom: 20px;
+}
+.review-box h4{
+    color: var(--secondary-dark, #16194F);
+font-family: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 36px */
+margin-top: 50px;
+margin-bottom: 20px;
+}
+.review-box textarea{
+    width: 92%;
+    height: 300px;
+    resize: none;
+    padding: 40px;
+    border-radius: 20px;
+border: 1.5px solid var(--secondary-dark, #16194F);
+background: #FFF;
+}
+.review-box textarea, .review-box textarea::placeholder, .review-box input, .review-box input::placeholder{
+    color: rgba(0, 0, 0, 0.60);
+font-family: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 36px */
+}
+.review-box input{
+    width: 92%;
+    padding: 15px 40px;
+    border-radius: 20px;
+border: 1.5px solid var(--secondary-dark, #16194F);
+background: #FFF;
+}
+.Review-button{
+    border-radius: 30px;
+  background-color: #16194f;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 22.5px */
+  width: 200px;
+  text-align: center;
+  display: block;
+  border: none;
+  margin: auto;
+  margin-top: 50px;
+  height: 55px;
+  cursor: pointer;
+}

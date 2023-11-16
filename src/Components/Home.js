@@ -1,6 +1,7 @@
 // Home.js
 import React from "react";
 import Navbar from "./Navbar";
+import logo from "../Images/logo.svg"
 import "../css/Home.css";
 import bg from "../Images/BackGround.svg";
 import arrowRight from "../Images/Arrow-Right.svg";
@@ -21,12 +22,31 @@ const Home = () => {
       <img src={bg} className="bg-image" />
       <div className="main">
         {/* navbar */}
-        <Navbar
-          buttonText="Log in"
-          buttonImage={arrowRight}
-          click="login"
-          buttonClassName="register-btn"
-        />
+        <nav>
+          
+          <img src={logo} className="logo" />
+          <ul >
+            <a href="#categories">
+              <li>Categories</li>
+            </a>
+            <a href="#features">
+              <li>Features</li>
+            </a>
+            <li>About</li>
+          </ul>
+          <Link to={`/login`}>
+            <button className="register-btn">
+              Login
+              
+                <img
+                  src={arrowRight}
+                  alt="Arrow"
+                  
+                />
+              
+            </button>
+          </Link>
+          </nav>
 
         {/* home section */}
         <section>

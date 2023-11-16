@@ -1,13 +1,8 @@
 .logo {
   position: relative;
 }
-.navbar {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  width: 100%;
-}
-.navbar ul {
+
+nav ul {
   display: flex;
 }
 li {

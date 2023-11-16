@@ -1,9 +1,10 @@
-import React from "react";
+import {React, useState} from "react";
 import { Link } from "react-router-dom";
 import products from "./Categories.json";
 import "../css/Maincategories.css";
 import bg from "../Images/BackGround.svg";
 import logo from "../Images/logo.svg";
+import search from "../Images/searchicon.svg"
 import profile from "../Images/profile-img.png";
 import Smartphone from "../Images/Smartphone.svg";
 import automotives from "../Images/automotives.svg"
@@ -19,6 +20,10 @@ import sunglasses from "../Images/sunglasses.svg"
 import watches from "../Images/watches.svg"
 
 const MainCategories = () => {
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
   const productImages = [
     {
       id: 1,
@@ -76,19 +81,34 @@ const MainCategories = () => {
       <div className="Mcategories main">
         <nav>
           <img src={logo} alt="Logo" />
+          
           <input
             type="text"
             placeholder="Search for any product"
             className="product-search"
           />
 
-          <div className="profile">
-            <img src={profile} alt="Profile" />
-            <p>Jennifer Lawrence</p>
+<div className="profile" onClick={toggleDropdown}>
+              <img src={profile} alt="Profile" />
+              <p>jennifer laurance</p>
+            </div>
+            <div
+            className={`profile-dropdown ${isDropdownVisible ? "show" : ""}`}
+          >
+            <Link to="/profile">
+              <li>Edit profile</li>
+            </Link>
+            <Link to="/myreviews">
+              <li>My reviews</li>
+            </Link>
+            <li>Log out</li>
           </div>
         </nav>
         <div className="redirect">
+        <Link to="/Mcategories">
           <p>Categories</p>
+          <hr></hr>
+        </Link>
         </div>
         <h3>What are you looking for?</h3>
 

@@ -1,0 +1,56 @@
+.MyReview{
+    position: relative;
+}
+.Myrev-prof{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.Myrev-prof img{
+    border-radius: 150px;
+    width: 120px;
+    height: 120px;
+    box-shadow: 0px 37.5px 75px 0px rgba(22, 25, 79, 0.15);
+    margin-right: 20px;
+}
+.Myrev-prof h5{
+    color: var(--secondary-dark, #16194F);
+font-family: Roboto;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 45px */
+margin: 0;
+}
+.Myrev-prof p{
+    color: rgba(22, 25, 79, 0.70);
+    margin: 0;
+font-family: Roboto;
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 45px */
+}
+.MyReview h2{
+    color: #FFF;
+font-family: Roboto;
+font-size: 50px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 75px */
+}
+.MyReview h4{
+    color: var(--secondary-dark, #16194F);
+font-family: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 36px */
+}
+.Myreview-box{
+    border-radius: 20px;
+background: rgba(255, 255, 255, 0.70);
+box-shadow: 0px 25px 50px 0px rgba(22, 25, 79, 0.15);
+width: 95%;
+padding: 30px;
+}

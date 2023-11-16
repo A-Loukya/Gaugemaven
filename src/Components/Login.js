@@ -1,4 +1,5 @@
 import Navbar from "../Components/Navbar";
+import logo from "../Images/logo.svg"
 import "../css/Login.css";
 import bg from "../Images/BackGround.svg";
 import rightarrow from "../Images/rightarrow.svg";
@@ -26,7 +27,19 @@ const Login = () => {
       <img src={bg} width="100%" className="bg-image" />
       <div className="main login">
         {/* navbar */}
-        <Navbar buttonClassName="custom-btn-class" />
+        <nav>
+          
+          <img src={logo} className="logo" />
+          <ul >
+            <a href="#categories">
+              <li>Categories</li>
+            </a>
+            <a href="#features">
+              <li>Features</li>
+            </a>
+            <li>About</li>
+          </ul>
+          </nav>
         <h1>
           Read reviews. Write reviews.<br></br> Find products.
         </h1>

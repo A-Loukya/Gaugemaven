@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import bg from "../Images/BackGround.svg";
 import logo from "../Images/logo.svg";
 import profile from "../Images/profile-img.png";
@@ -10,6 +11,10 @@ import StarRating from "./StarRating";
 const Product = () => {
   const { productN } = useParams();
   const categoryName = productN.toLowerCase();
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
 
   // Find all products with matching category
   const matchingProducts = productsData.filter(
@@ -33,19 +38,32 @@ const Product = () => {
               className="product-search"
             />
 
-            <div className="profile">
+<div className="profile" onClick={toggleDropdown}>
               <img src={profile} alt="Profile" />
-              <p>Jennifer Lawrence</p>
+              <p>Jennifer laurance</p>
             </div>
+          <div
+            className={`profile-dropdown ${isDropdownVisible ? "show" : ""}`}
+          >
+            <Link to="/profile">
+              <li>Edit profile</li>
+            </Link>
+            <Link to="/myreviews">
+              <li>My reviews</li>
+            </Link>
+            <li>Log out</li>
+          </div>
           </nav>
           {/* redirect to back */}
           <div className="redirect">
             <Link to="/Mcategories">
               <p>Categories</p>
+              <hr></hr>
             </Link>
             <p> {">"}</p>
             <Link to={`/product/${productN}`}>
               <p>{productN}</p>
+              <hr></hr>
             </Link>
           </div>
 

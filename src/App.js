@@ -13,6 +13,8 @@ import ImageCarousel from "./Components/ImagesCarousel";
 import Product from "./Components/Product";
 import ProductReview from "./Components/ProductReview";
 import About from "./Components/About";
+import WriteReview from "./Components/WriteReview";
+import MyReviews from "./Components/MyReviews";
 function App() {
 
   return (
@@ -28,10 +30,12 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/myreviews" element={<MyReviews />} />
           <Route path="/Mcategories" element={<MainCategories />} />
           <Route path="/product/:productN" element={<Product/>} />
           <Route path="/product/:productN/:productR" element={<ProductReview/>} />
           <Route path="/product/:productN/:productName/images" element={<ImageCarousel />} />
+          <Route path="/product/:productN/:productName/review" element={<WriteReview />} />
         </Routes>
       </div>
     </Router>

@@ -1,18 +1,19 @@
 import "../css/Categories.css";
-import shoes from "../Images/shoes.svg";
-import beauty from "../Images/beauty.svg";
-import books from "../Images/books.svg";
-import electronics from "../Images/electronics.svg";
-import kitchen from "../Images/kitchen.svg";
-import luggage from "../Images/luggage.svg";
-import sports from "../Images/sports.svg";
-import toys from "../Images/toys.svg";
-import React, { useState } from "react";
+import { useState } from "react";
+import Smartphone from "../Images/Smartphone.svg";
+import automotives from "../Images/automotives.svg"
+import bags from "../Images/bags.svg"
+import fragrances from "../Images/fragrances.svg"
+import furniture from "../Images/furniture.svg"
+import groceries from "../Images/groceries.svg"
+import homedecor from "../Images/homedecor.svg"
+import jewellery from "../Images/jewellery.svg"
+import laptop from "../Images/laptops.svg"
+import light from "../Images/light.svg"
+import sunglasses from "../Images/sunglasses.svg"
+import watches from "../Images/watches.svg"
 import { Link } from "react-router-dom";
 const Categories = ({ click }) => {
-  // const [navigate,setNavigate]=useState('');
-  // navigate={onclick}
-  // if(navigate==)
   // carousel logic
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -79,111 +80,70 @@ const Categories = ({ click }) => {
 const data1 = [
   {
     id: 1,
-    image: shoes,
-    title: "Shoes",
+    image: automotives,
+    title: "Automotives",
   },
   {
     id: 2,
-    image: electronics,
-    title: "Electronics",
+    image: fragrances,
+    title: "Fragrances",
   },
   {
     id: 3,
-    image: books,
-    title: "Books",
+    image: furniture,
+    title: "Furniture",
   },
   {
     id: 4,
-    image: sports,
-    title: "Sports",
+    image: groceries,
+    title: "Groceries",
   },
 
   {
     id: 5,
-    image: electronics,
-    title: "Electronics",
+    image: homedecor,
+    title: "Homedecor",
   },
   {
     id: 6,
-    image: books,
-    title: "Books",
-  },
-  {
-    id: 7,
-    image: sports,
-    title: "Sports",
-  },
-
-  {
-    id: 8,
-    image: electronics,
-    title: "Electronics",
-  },
-  {
-    id: 9,
-    image: books,
-    title: "Books",
-  },
-  {
-    id: 10,
-    image: sports,
-    title: "Sports",
+    image: light,
+    title: "lighting",
   },
 ];
 // data2
 const data2 = [
   {
     id: 1,
-    image: luggage,
-    title: "Luggage",
+    image: laptop,
+    title: "Laptops",
   },
   {
     id: 2,
-    image: toys,
-    title: "Toys",
+    image: Smartphone,
+    title: "Smartphone",
   },
   {
     id: 3,
-    image: kitchen,
-    title: "Home & Kitchen",
+    image: sunglasses,
+    title: "Sun glasses",
   },
   {
     id: 4,
-    image: beauty,
-    title: "Beauty",
+    image: watches,
+    title: "MensWatches",
   },
 
   {
     id: 5,
-    image: toys,
-    title: "Toys",
+    image: bags,
+    title: "WomensBags",
   },
   {
     id: 6,
-    image: kitchen,
-    title: "Home & Kitchen",
-  },
-  {
-    id: 7,
-    image: beauty,
-    title: "Beauty",
+    image: jewellery,
+    title: "Womenjwellery",
   },
 
-  {
-    id: 8,
-    image: toys,
-    title: "Toys",
-  },
-  {
-    id: 9,
-    image: kitchen,
-    title: "Home & Kitchen",
-  },
-  {
-    id: 10,
-    image: beauty,
-    title: "Beauty",
-  },
 ];
 
 export default Categories;

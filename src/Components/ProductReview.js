@@ -1,6 +1,7 @@
 import "../css/ProductReview.css";
 import bg from "../Images/BackGround.svg";
 import { Link, useParams } from "react-router-dom";
+import { useState } from "react";
 import logo from "../Images/logo.svg";
 import profile from "../Images/profile-img.png";
 import arrowout from "../Images/arrowout.svg";
@@ -11,6 +12,10 @@ import ReviewCard from "./ReviewCard";
 const ProductReview = () => {
   const { productN, productR } = useParams();
   const ProductName = productR.toLowerCase();
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
   const matchingProduct = productsData.filter(
     (product) => product.name.toLowerCase() === ProductName
   );
@@ -32,22 +37,38 @@ const ProductReview = () => {
             className="product-search"
           />
 
-          <div className="profile">
-            <img src={profile} alt="Profile" />
-            <p>Jennifer Lawrence</p>
+<div className="profile" onClick={toggleDropdown}>
+              <img src={profile} alt="Profile" />
+              <p>Jennifer laurance</p>
+            </div>
+          <div
+            className={`profile-dropdown ${isDropdownVisible ? "show" : ""}`}
+          >
+            <Link to="/profile">
+              <li>Edit profile</li>
+            </Link>
+            <Link to="/myreviews">
+              <li>My reviews</li>
+            </Link>
+            <li>Log out</li>
           </div>
         </nav>
         {/* redirect to back */}
         <div className="redirect">
           <Link to="/Mcategories">
             <p>Categories</p>
+            <hr></hr>
           </Link>
           <p> {">"}</p>
           <Link to={`/product/${productN}`}>
             <p>{productN}</p>
+            <hr></hr>
           </Link>
           <p> {">"}</p>
+          <Link to={`/product/${productN}/${productR}`}>
           <p>{productR}</p>
+          <hr></hr>
+          </Link>
         </div>
 
         {/* product details */}
@@ -94,14 +115,27 @@ const ProductReview = () => {
         ))}
 
         {/* review btn */}
-        <div className="write-rev">
+        {matchingProduct.map((product) => (
+        <div key={product._id}  className="write-rev">
           <div className="profile">
             <img src={profile} alt="Profile" />
             <p>Jennifer Lawrence</p>
-          </div>
-          <button>Review it</button>
+          </div>   
+          <Link
+                  key={product._id}
+                  to={{
+                    pathname: `/product/${productN}/${product.name}/review`,
+                    state: {
+                      productN: productN,
+                      productName: product.name,
+                    },
+                  }}
+                >
+          <button className="writeRev-button ">Review it</button>
+          </Link>
+          
         </div>
-
+))}
         {/* rating bars */}
         {matchingProduct.map((product) => (
           <RatingBars ratings={product.review} count={product.count} />
@@ -144,14 +178,5 @@ const getRatingLabel = (averageRating) => {
 
 export default ProductReview;
 {
-  /* <img
-              src={product.images[0]}
-              alt="Product"
-              className="product-Img"
-            />
-            <div>
-              <h4> {product.name}</h4>
-              <p>Reviews {product.count} | </p>
-              <div style={{ display: "flex", alignItems: "center" }}></div>
-            </div> */
+ 
 }

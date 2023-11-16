@@ -18,15 +18,16 @@
   background-color: #16194f;
   color: white;
   border: none;
-  padding: 8px 10px;
+  padding: 10px 20px;
   border-radius: 52px;
-  text-align: center;
+  /* text-align: center; */
 }
 .product-search::placeholder {
   color: white;
 }
 .redirect {
   display: flex;
+  margin-bottom: 50px;
 }
 .redirect p {
   color: #fff;
@@ -37,6 +38,24 @@
   line-height: 150%;
   margin-right: 10px;
   margin-top: 0;
+  margin-bottom: 0;
+  transition: color 0.3s ease;
+}
+.redirect hr {
+  background-color: white;
+  height: 1px;
+  color: white;
+  width: 0; /* Start with zero width */
+  visibility: hidden; /* Hide the element */
+  margin:  5px 0 5px -2px;
+  border-radius: 100%;
+  transition: width 0.3s ease, visibility 0s 0.3s; /* Add transitions for a smoother effect */
+}
+
+.redirect p:hover + hr {
+  width: 100%; /* Expand to full width on hover */
+  visibility: visible; /* Make the element visible on hover */
+  transition: width 0.3s ease; /* Adjust the transition for width only */
 }
 .category-details {
   width: 100%;

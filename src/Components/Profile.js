@@ -1,10 +1,18 @@
 import "../css/Profile.css";
+import React, { useState } from "react";
 import bg from "../Images/BackGround.svg";
 import Navbar from "../Components/Navbar";
 import profileImg from "../Images/profile-img.png";
+import logo from "../Images/logo.svg";
 import rightarrow from "../Images/rightarrow.svg";
+import profile from "../Images/profile-img.png";
+import { Link } from "react-router-dom";
 const Profile = () => {
-  const name = "jennifer laurence";
+  const name = "Jennifer laurence";
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
   const handleFileChange = (e) => {
     // Handle the file change event here, if needed
     const selectedFile = e.target.files[0];
@@ -14,13 +22,34 @@ const Profile = () => {
     <div>
       <img src={bg} width="100%" className="bg-image" />
       <div className="main">
-        <Navbar
-          buttonText={name}
-          buttonImage={profileImg}
-          click="profile"
-          buttonClassName="custom-profile-class"
-          imageSize={50}
-        />
+      <nav>
+          
+          <img src={logo} className="logo" />
+          <ul >
+            <a href="#categories">
+              <li>Categories</li>
+            </a>
+            <a href="#features">
+              <li>Features</li>
+            </a>
+            <li>About</li>
+          </ul>
+          <div className="profile" onClick={toggleDropdown}>
+            <img src={profile} alt="Profile" />
+            <p>{name}</p>
+          </div>
+        <div
+          className={`profile-dropdown ${isDropdownVisible ? "show" : ""}`}
+        >
+          <Link to="/profile">
+            <li>Edit profile</li>
+          </Link>
+          <Link to="/myreviews">
+            <li>My reviews</li>
+          </Link>
+          <li>Log out</li>
+        </div>
+      </nav>
         <div className="profile-box">
           <div className="profile-details">
             <img src={profileImg} />

@@ -2,6 +2,7 @@ import Navbar from "../Components/Navbar";
 import "../css/Signup.css";
 import bg from "../Images/BackGround.svg";
 import rightarrow from "../Images/rightarrow.svg";
+import logo from "../Images/logo.svg"
 import image from "../Images/signupImage.svg";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -28,7 +29,19 @@ const Signup = () => {
       <img src={bg} width="100%" className="bg-image" />
       <div className="main signup">
         {/* navbar */}
-        <Navbar buttonClassName="custom-btn-class" />
+        <nav>
+          
+          <img src={logo} className="logo" />
+          <ul >
+            <a href="#categories">
+              <li>Categories</li>
+            </a>
+            <a href="#features">
+              <li>Features</li>
+            </a>
+            <li>About</li>
+          </ul>
+          </nav>
         <h1>
           Read reviews. Write reviews.<br></br> Find products.
         </h1>

@@ -80,7 +80,7 @@
   justify-content: space-between;
   padding: 30px;
 }
-.write-rev button {
+.writeRev-button {
   border-radius: 30px;
   background-color: #16194f;
   color: #fff;
@@ -92,8 +92,7 @@
   width: 200px;
   text-align: center;
   border: none;
-}
-.write-rev button:hover {
+  height: 100%;
   cursor: pointer;
 }
 .write-rev .profile p {

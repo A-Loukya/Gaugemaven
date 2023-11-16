@@ -39,17 +39,23 @@ const ImageCarousel = () => {
         <div className="redirect">
           <Link to="/Mcategories">
             <p>Categories</p>
+            <hr></hr>
           </Link>
           <p> {">"}</p>
           <Link to={`/product/${productN}`}>
             <p>{productN}</p>
+            <hr></hr>
           </Link>
           <p> {">"}</p>
           <Link to={`/product/${productN}/${productName}`}>
             <p>{productName}</p>
+            <hr></hr>
           </Link>
           <p> {">"}</p>
+          <Link to={`/product/${productN}/${productName}/images`}>
           <p>Images</p>
+          <hr></hr>
+          </Link>
         </div>
         {/* carousel */}
         <div className="carousel-container">

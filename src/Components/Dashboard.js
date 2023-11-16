@@ -1,8 +1,6 @@
-import React from "react";
-import Navbar from "./Navbar";
+import React, { useState } from "react";
 import "../css/Home.css";
 import bg from "../Images/BackGround.svg";
-import arrowRight from "../Images/Arrow-Right.svg";
 import homeImg from "../Images/home-images.svg";
 import shape1 from "../Images/Shape1.svg";
 import shape2 from "../Images/Shape 2.svg";
@@ -10,26 +8,50 @@ import shape3 from "../Images/Shape 3.svg";
 import Categories from "./Categories";
 import Features from "./Features";
 import Faq from "./Faq";
-import profileImg from "../Images/profile-img.png";
+import logo from "../Images/logo.svg";
+import profile from "../Images/profile-img.png";
 import "../css/Dashboard.css";
 import { Link } from "react-router-dom";
 const Dashboard = () => {
   // name extracted from email
   const name = "Jennifer laurence";
-
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
   return (
     <div>
       <img src={bg} className="bg-image" />
       <div className="main">
         {/* navbar */}
-        <Navbar
-          buttonText={name}
-          buttonImage={profileImg}
-          click="profile"
-          buttonClassName="custom-profile-class"
-          imageSize={50}
-        />
-
+        <nav>
+          
+            <img src={logo} className="logo" />
+            <ul >
+              <a href="#categories">
+                <li>Categories</li>
+              </a>
+              <a href="#features">
+                <li>Features</li>
+              </a>
+              <li>About</li>
+            </ul>
+            <div className="profile" onClick={toggleDropdown}>
+              <img src={profile} alt="Profile" />
+              <p>{name}</p>
+            </div>
+          <div
+            className={`profile-dropdown ${isDropdownVisible ? "show" : ""}`}
+          >
+            <Link to="/profile">
+              <li>Edit profile</li>
+            </Link>
+            <Link to="/myreviews">
+              <li>My reviews</li>
+            </Link>
+            <li>Log out</li>
+          </div>
+        </nav>
         {/* home section */}
         <section>
           <div className="home">
