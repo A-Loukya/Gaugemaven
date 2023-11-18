@@ -5,6 +5,7 @@ import "../css/WriteReview.css";
 import { Link, useParams } from "react-router-dom";
 import productsData from "./productsData.json";
 import GiveRating from "./GiveRating";
+import Footer from './Footer';
 const WriteReview = () => {
   const { productN,productName } = useParams();
   const [review, setReview] = useState(0);
@@ -80,6 +81,7 @@ const WriteReview = () => {
             ))}
         </div>
       </div>
+      <Footer/>
         </div>
      );
 }

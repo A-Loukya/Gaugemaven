@@ -3,6 +3,7 @@ import "../css/About.css";
 import logo from "../Images/logo.svg";
 import profile from "../Images/profile-img.png";
 import aboutImg from "../Images/About.png";
+import Footer from "./Footer";
 const About = () => {
   return (
     <div>
@@ -88,6 +89,7 @@ const About = () => {
           </p>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

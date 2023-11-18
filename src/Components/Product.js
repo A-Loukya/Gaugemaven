@@ -8,6 +8,7 @@ import "../css/Product.css";
 import productsData from "./productsData.json";
 import StarRating from "./StarRating";
 import search from "../Images/searchicon.svg"
+import Footer from "./Footer";
 
 const Product = () => {
   const { productN } = useParams();
@@ -108,6 +109,7 @@ const Product = () => {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

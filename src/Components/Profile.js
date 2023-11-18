@@ -7,6 +7,7 @@ import logo from "../Images/logo.svg";
 import rightarrow from "../Images/rightarrow.svg";
 import profile from "../Images/profile-img.png";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 const Profile = () => {
   const name = "Jennifer laurence";
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -80,6 +81,7 @@ const Profile = () => {
           </form>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

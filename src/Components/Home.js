@@ -13,6 +13,7 @@ import Categories from "./Categories";
 import Features from "./Features";
 import Faq from "./Faq";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -79,6 +80,7 @@ const Home = () => {
       <Categories click="login" />
       <Features />
       <Faq />
+      <Footer/>
 
       {/* <Profile/> */}
       {/* <MainCategories/> */}

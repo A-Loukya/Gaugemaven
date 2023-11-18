@@ -6,6 +6,7 @@ import logo from "../Images/logo.svg"
 import image from "../Images/signupImage.svg";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 const Signup = () => {
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
@@ -84,6 +85,7 @@ const Signup = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

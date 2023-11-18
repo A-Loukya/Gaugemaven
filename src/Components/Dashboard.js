@@ -12,6 +12,7 @@ import logo from "../Images/logo.svg";
 import profile from "../Images/profile-img.png";
 import "../css/Dashboard.css";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 const Dashboard = () => {
   // name extracted from email
   const name = "Jennifer laurence";
@@ -84,6 +85,7 @@ const Dashboard = () => {
       <Categories click="Mcategories" />
       <Features />
       <Faq />
+      <Footer/>
     </div>
   );
 };

@@ -9,6 +9,7 @@ import data from "./MyReviews.json";
 import profileImg from "../Images/profile-img.png";
 import StarRating from "./StarRating";
 import search from "../Images/searchicon.svg"
+import Footer from "./Footer";
 const MyReviews = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const toggleDropdown = () => {
@@ -102,6 +103,7 @@ const MyReviews = () => {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

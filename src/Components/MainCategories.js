@@ -18,6 +18,7 @@ import laptop from "../Images/laptops.svg"
 import light from "../Images/light.svg"
 import sunglasses from "../Images/sunglasses.svg"
 import watches from "../Images/watches.svg"
+import Footer from "./Footer";
 
 const MainCategories = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -147,6 +148,7 @@ const MainCategories = () => {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

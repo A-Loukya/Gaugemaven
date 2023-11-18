@@ -10,6 +10,7 @@ import StarRating from "./StarRating";
 import RatingBars from "./RatingBars";
 import ReviewCard from "./ReviewCard";
 import search from "../Images/searchicon.svg"
+import Footer from "./Footer";
 const ProductReview = () => {
   const { productN, productR } = useParams();
   const ProductName = productR.toLowerCase();
@@ -150,6 +151,7 @@ const ProductReview = () => {
         {/* review cards */}
         <ReviewCard reviews={matchingProduct} />
       </div>
+      <Footer/>
     </div>
   );
 };
