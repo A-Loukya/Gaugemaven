@@ -1,3 +1,83 @@
 .about{
     position: relative;
 }
+
+.about section{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.about-left{
+    color: white;
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-left h1{
+    font-family: Roboto;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    width: 370px;
+    margin: 20px 0;
+}
+
+.about-left p{
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    width: 560px;
+    margin-bottom: 40px;
+    color: #16194f;
+}
+
+.about-right {
+    width: 50%;
+    text-align: right; 
+    margin-top: 150px;
+    margin-left: 325px;
+}
+  
+  .about-right img {
+    width: 303px;
+    height: 513px; 
+    display: block; 
+    margin: 0 auto;
+    /* max-width: 100%;  */
+}
+
+.about-thoughts{
+    margin-top: 260px;
+    color: #16194f;
+}
+
+.about-thoughts p{
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 150%;
+    width:1200px;
+    margin-bottom: 120px;
+    
+ 
+}
+
+.about-thoughts span{
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+
+}
+
