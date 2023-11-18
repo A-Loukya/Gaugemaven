@@ -34,7 +34,7 @@ const MyReviews = () => {
       <div className="main MyReview">
         {/* nav */}
         <nav>
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" className="logo"/>
           <div className="product-search">
             <img src={search}/>
           <input

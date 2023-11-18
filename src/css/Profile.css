@@ -113,6 +113,8 @@
   margin-bottom: 30px;
 }
 .psbmt-btn {
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
   margin: auto;
   width: 180px;
@@ -131,6 +133,10 @@
   line-height: 150%;
   align-self: center;
   align-content: center;
+}
+.psbmt-btn span{
+  display: flex;
+  align-items: center;
 }
 .psbmt-btn img {
   margin-left: 7px;

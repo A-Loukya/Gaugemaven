@@ -10,7 +10,7 @@ const About = () => {
       <div className="main about">
         {/* nav */}
         <nav>
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" className="logo"/>
 
         </nav>
         <section>

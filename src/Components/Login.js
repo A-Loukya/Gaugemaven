@@ -66,7 +66,7 @@ const Login = () => {
               </p>
               {/* <Link to="/dashboard"> */}
              
-              <button className="login-btn"><div className="btn-circle1"></div><span>Sign up  <img src={rightarrow} /></span><div className="btn-circle2" ></div></button>
+              <button className="login-btn"><div className="btn-circle1"></div><span>Log in<img src={rightarrow} /></span><div className="btn-circle2" ></div></button>
               {/* </Link> */}
             </form>
           </div>

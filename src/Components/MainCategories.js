@@ -80,7 +80,7 @@ const MainCategories = () => {
       <img src={bg} width="100%" className="bg-image" />
       <div className="Mcategories main">
         <nav>
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" className="logo"/>
           <div className="product-search">
             <img src={search}/>
           <input

@@ -30,7 +30,7 @@ const WriteReview = () => {
  <img src={bg} width="100%" className="bg-image" />
       <div className="main writeReview">
         <nav>
-            <img src={logo}/>
+            <img src={logo} className="logo"/>
         </nav>
             {/* redirect */}
         <div className="redirect">
@@ -74,7 +74,7 @@ const WriteReview = () => {
       />
        <h4>Give title to your review.</h4>
        <input type='text' placeholder='Keep it short.'/>
-       <button className="Review-button ">Review it</button>
+       <button className="Review-button "><div className="btn-circle1"></div><span>Review it</span><div className="btn-circle2" ></div></button>
                    </form>
                 </div>
             ))}

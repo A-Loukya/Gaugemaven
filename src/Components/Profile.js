@@ -25,15 +25,7 @@ const Profile = () => {
       <nav>
           
           <img src={logo} className="logo" />
-          <ul >
-            <a href="#categories">
-              <li>Categories</li>
-            </a>
-            <a href="#features">
-              <li>Features</li>
-            </a>
-            <li>About</li>
-          </ul>
+          
           <div className="profile" onClick={toggleDropdown}>
             <img src={profile} alt="Profile" />
             <p>{name}</p>
@@ -83,7 +75,7 @@ const Profile = () => {
             <label className="profile-form-label">Language</label>
             <input type="text" className="profile-form-input" />
             <button className="psbmt-btn">
-              Submit <img src={rightarrow} />
+            <div className="btn-circle1"></div><span>Submit<img src={rightarrow} /></span><div className="btn-circle2" ></div>
             </button>
           </form>
         </div>

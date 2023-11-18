@@ -54,6 +54,7 @@ border: 1.5px solid var(--secondary-dark, #16194F);
 background: #FFF;
 }
 .Review-button{
+    position: relative;
     border-radius: 30px;
   background-color: #16194f;
   color: #fff;
@@ -70,4 +71,5 @@ background: #FFF;
   margin-top: 50px;
   height: 55px;
   cursor: pointer;
+  overflow: hidden;
 }
