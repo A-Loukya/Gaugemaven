@@ -7,6 +7,7 @@ import { useParams, Link } from "react-router-dom";
 import "../css/Product.css";
 import productsData from "./productsData.json";
 import StarRating from "./StarRating";
+import search from "../Images/searchicon.svg"
 
 const Product = () => {
   const { productN } = useParams();
@@ -32,11 +33,14 @@ const Product = () => {
           {/* nav */}
           <nav>
             <img src={logo} alt="Logo" />
-            <input
-              type="text"
-              placeholder="Search for any product"
-              className="product-search"
-            />
+            <div className="product-search">
+            <img src={search}/>
+          <input
+            type="text"
+            placeholder="Search for any product"
+            
+          />
+          </div>
 
 <div className="profile" onClick={toggleDropdown}>
               <img src={profile} alt="Profile" />

@@ -47,24 +47,28 @@ const Faq = () => {
 };
 const data1 = [
   {
-    question: "Ut enim ad minim veniam, quis nostrud exercitation?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    question: "How long does it take for my review to be published on GaugeMaven?",
+    answer:"Reviews on GaugeMaven are published immediately after submission. Our platform employs a real-time or automated review publishing process, allowing users to see their reviews and share their experiences with the community without delay",
   },
   {
-    question: "dolor sit amet, consectetur adipiscing elit?",
+    question: "Can I trust the ratings and reviews on GaugeMaven?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Yes, you can trust the ratings and reviews on GaugeMaven. We take measures to ensure the credibility of the information including user authentication. Our goal is to provide users with reliable and honest insights into products.",
   },
   {
-    question: "Ut enim ad minim veniam, quis nostrud exercitation?",
+    question: "How do I submit a product review on GaugeMaven?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      " To submit a product review on GaugeMaven, follow these steps Navigate to the product page of the item you want to review. Click on the Review it button.Provide your rating, write your review, and submit your feedback.Your review will be published immediately in reviews section.",
   },
   {
-    question: "dolor sit amet, consectetur adipiscing elit?",
+    question: "Can I respond to or comment on other users' reviews?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      " Yes, GaugeMaven encourages interaction among users though you can only like others reviews but can not comment on it. This feature helps in fostering a community where users can show gratitude to others for their valuble review.",
+  },
+  {
+    question: "What should I include in my product review to make it helpful for others?",
+    answer:
+      " A helpful product review on GaugeMaven includes details about your actual experience with the product. Mention key features, highlight what you liked or disliked, and provide insights that potential buyers might find valuable. Be specific and consider addressing common concerns raised by other users.",
   },
 ];
 

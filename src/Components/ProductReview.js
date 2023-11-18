@@ -9,6 +9,7 @@ import productsData from "./productsData.json";
 import StarRating from "./StarRating";
 import RatingBars from "./RatingBars";
 import ReviewCard from "./ReviewCard";
+import search from "../Images/searchicon.svg"
 const ProductReview = () => {
   const { productN, productR } = useParams();
   const ProductName = productR.toLowerCase();
@@ -31,11 +32,14 @@ const ProductReview = () => {
         {/* nav */}
         <nav>
           <img src={logo} alt="Logo" />
+          <div className="product-search">
+            <img src={search}/>
           <input
             type="text"
             placeholder="Search for any product"
-            className="product-search"
+            
           />
+          </div>
 
 <div className="profile" onClick={toggleDropdown}>
               <img src={profile} alt="Profile" />
@@ -131,7 +135,9 @@ const ProductReview = () => {
                     },
                   }}
                 >
-          <button className="writeRev-button ">Review it</button>
+                  
+          <button className="writeRev-button "><div className="btn-circle1"></div><span>Review it</span><div className="btn-circle2" ></div></button>
+                  
           </Link>
           
         </div>
@@ -177,6 +183,3 @@ const getRatingLabel = (averageRating) => {
 };
 
 export default ProductReview;
-{
- 
-}

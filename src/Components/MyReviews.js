@@ -8,6 +8,7 @@ import profile from "../Images/profile-img.png";
 import data from "./MyReviews.json";
 import profileImg from "../Images/profile-img.png";
 import StarRating from "./StarRating";
+import search from "../Images/searchicon.svg"
 const MyReviews = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const toggleDropdown = () => {
@@ -34,11 +35,14 @@ const MyReviews = () => {
         {/* nav */}
         <nav>
           <img src={logo} alt="Logo" />
+          <div className="product-search">
+            <img src={search}/>
           <input
             type="text"
             placeholder="Search for any product"
-            className="product-search"
+            
           />
+          </div>
 
           <div className="profile" onClick={toggleDropdown}>
             <img src={profile} alt="Profile" />
@@ -69,7 +73,7 @@ const MyReviews = () => {
             <div key={index}>
               {user.product_name.map((productName, i) => (
                 <div key={i}>
-                  <h4>You reviewed {user.product_name[i]}</h4>
+                  <h4 style={{ marginTop: '80px' }}>You reviewed {user.product_name[i]}</h4>
                   <div className="review-card">
                     <div className="review-profile">
                       <img src={profile} className="reviewProfile-img" />

@@ -72,6 +72,7 @@ const Profile = () => {
                 onChange={handleFileChange}
               />
             </label>
+            <button className="RemovePic-btn">Remove the current profile picture</button>
             <br></br>
             <label className="profile-form-label">Email</label>
             <input type="email" className="profile-form-input" />

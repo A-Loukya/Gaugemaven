@@ -30,15 +30,6 @@ const Login = () => {
         <nav>
           
           <img src={logo} className="logo" />
-          <ul >
-            <a href="#categories">
-              <li>Categories</li>
-            </a>
-            <a href="#features">
-              <li>Features</li>
-            </a>
-            <li>About</li>
-          </ul>
           </nav>
         <h1>
           Read reviews. Write reviews.<br></br> Find products.
@@ -74,9 +65,8 @@ const Login = () => {
                 </Link>
               </p>
               {/* <Link to="/dashboard"> */}
-              <button className="login-btn">
-                Log in <img src={rightarrow} />
-              </button>
+             
+              <button className="login-btn"><div className="btn-circle1"></div><span>Sign up  <img src={rightarrow} /></span><div className="btn-circle2" ></div></button>
               {/* </Link> */}
             </form>
           </div>

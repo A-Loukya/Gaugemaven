@@ -81,12 +81,14 @@ const MainCategories = () => {
       <div className="Mcategories main">
         <nav>
           <img src={logo} alt="Logo" />
-          
+          <div className="product-search">
+            <img src={search}/>
           <input
             type="text"
             placeholder="Search for any product"
-            className="product-search"
+            
           />
+          </div>
 
 <div className="profile" onClick={toggleDropdown}>
               <img src={profile} alt="Profile" />

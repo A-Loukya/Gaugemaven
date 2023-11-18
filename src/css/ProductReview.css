@@ -56,7 +56,7 @@
   display: flex;
   padding: 35px;
   min-width: 210px;
-  height: 70px;
+  height: 30px;
   align-items: center;
 }
 .product-link img {
@@ -81,6 +81,7 @@
   padding: 30px;
 }
 .writeRev-button {
+  position: relative;
   border-radius: 30px;
   background-color: #16194f;
   color: #fff;
@@ -88,12 +89,41 @@
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 22.5px */
+  line-height: 150%;
   width: 200px;
   text-align: center;
   border: none;
-  height: 100%;
+  height: 60px;
   cursor: pointer;
+  overflow: hidden;
+}
+
+
+
+.btn-circle1 {
+  height: 35px;
+  position: absolute;
+  background-color: #DD2F6C;
+  border-radius: 100%;
+  top: -42px;
+  width: 87px;
+  right: 14px;
+  height: 61px;
+}
+
+.btn-circle2 {
+  height: 35px;
+  position: absolute;
+  background-color: #554DDE;
+  width: 87px;
+  border-radius: 100%;
+  bottom: -42px;
+  left: 14px;
+  height: 61px;
+}
+
+.writeRev-button span{
+  position: relative;
 }
 .write-rev .profile p {
   color: #16194f;

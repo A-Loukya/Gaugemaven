@@ -35,8 +35,12 @@ const Features = () => {
             </p>
             <Link to="/about">
             <button className="feature-btn">
-              About us
+            <div className="btn-circle1"></div>
+            <div style={{display:'flex',alignItems:"center",justifyContent:"center"}}>
+              <span>About us</span>
               <img src={rightarrow} />
+              </div>
+              <div className="btn-circle2"></div>
             </button>
             </Link>
           </div>

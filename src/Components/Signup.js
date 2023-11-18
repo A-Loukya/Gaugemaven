@@ -32,15 +32,6 @@ const Signup = () => {
         <nav>
           
           <img src={logo} className="logo" />
-          <ul >
-            <a href="#categories">
-              <li>Categories</li>
-            </a>
-            <a href="#features">
-              <li>Features</li>
-            </a>
-            <li>About</li>
-          </ul>
           </nav>
         <h1>
           Read reviews. Write reviews.<br></br> Find products.
@@ -84,7 +75,7 @@ const Signup = () => {
                   <span>Log in!</span>
                 </Link>
               </p>
-              <button className="signup-btn">Sign up </button>
+              <button className="signup-btn"><div className="btn-circle1"></div><span>Sign up</span><div className="btn-circle2" ></div></button>
             </form>
           </div>
           {/* signup-right */}

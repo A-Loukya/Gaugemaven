@@ -8,11 +8,14 @@
 }
 .product-search img {
   position: relative;
+  z-index: 5;
+  left: 34px;
+  top: 3px;
   /* left: 20px; */
   /* top: 15px; */
 }
-.product-search {
-  /* position: absolute; */
+.product-search input {
+  position: relative;
   width: 285px;
   height: 30px;
   background-color: #16194f;
@@ -20,16 +23,19 @@
   border: none;
   padding: 10px 20px;
   border-radius: 52px;
+  padding-left: 40px;
   /* text-align: center; */
 }
 .product-search::placeholder {
   color: white;
+
 }
 .redirect {
   display: flex;
   margin-bottom: 50px;
 }
 .redirect p {
+  cursor: pointer;
   color: #fff;
   font-family: Roboto;
   font-size: 17px;

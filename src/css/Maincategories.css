@@ -75,12 +75,12 @@ nav {
   margin: 10px auto 20px auto;
 }
 .c-details hr {
-  color: rgba(0, 0, 0, 0.3);
+  /* color: rgba(0, 0, 0, 0.3); */
   width: 245px;
   height: 1px;
-  background: rgba(0, 0, 0, 0.3);
-
   margin-top: 0;
+  background-color: #000;
+  opacity: 55%;
 }
 .c-details p {
   color: #6a6d9e;

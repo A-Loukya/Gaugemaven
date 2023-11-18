@@ -13,8 +13,6 @@ import Categories from "./Categories";
 import Features from "./Features";
 import Faq from "./Faq";
 import { Link } from "react-router-dom";
-// import Profile from "./Profile";
-// import MainCategories from "./MainCategories";
 
 const Home = () => {
   return (
@@ -36,7 +34,7 @@ const Home = () => {
           </ul>
           <Link to={`/login`}>
             <button className="register-btn">
-              Login
+              Log in
               
                 <img
                   src={arrowRight}
