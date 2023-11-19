@@ -2,19 +2,13 @@ import "../css/Faq.css";
 import { useState } from "react";
 const Faq = () => {
   const [selected, setSelected] = useState(null);
-  const [selected1, setSelected1] = useState(null);
   const toggle = (i) => {
     if (selected === i) {
       return setSelected(null);
     }
     setSelected(i);
   };
-  const toggle1 = (i) => {
-    if (selected1 === i) {
-      return setSelected1(null);
-    }
-    setSelected1(i);
-  };
+  
   return (
     <div>
       <div className="main faq">

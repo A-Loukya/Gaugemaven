@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "../css/Home.css";
 import bg from "../Images/BackGround.svg";
 import homeImg from "../Images/home-images.svg";
@@ -14,8 +15,11 @@ import "../css/Dashboard.css";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 const Dashboard = () => {
-  // name extracted from email
-  const name = "Jennifer laurence";
+  const location = useLocation();
+  const { state } = location;
+  const name = state && state.name;
+console.log('Name in Dashboard:', name);
+
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
@@ -35,7 +39,9 @@ const Dashboard = () => {
               <a href="#features">
                 <li>Features</li>
               </a>
+              <Link to="/about">
               <li>About</li>
+              </Link>
             </ul>
             <div className="profile" onClick={toggleDropdown}>
               <img src={profile} alt="Profile" />
@@ -50,7 +56,7 @@ const Dashboard = () => {
             <Link to="/myreviews">
               <li>My reviews</li>
             </Link>
-            <li>Log out</li>
+            <li className="logout">Log out</li>
           </div>
         </nav>
         {/* home section */}

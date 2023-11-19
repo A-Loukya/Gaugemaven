@@ -56,7 +56,7 @@ const Product = () => {
             <Link to="/myreviews">
               <li>My reviews</li>
             </Link>
-            <li>Log out</li>
+            <li className="logout">Log out</li>
           </div>
           </nav>
           {/* redirect to back */}

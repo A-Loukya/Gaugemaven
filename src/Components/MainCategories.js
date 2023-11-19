@@ -104,7 +104,7 @@ const MainCategories = () => {
             <Link to="/myreviews">
               <li>My reviews</li>
             </Link>
-            <li>Log out</li>
+            <li className="logout">Log out</li>
           </div>
         </nav>
         <div className="redirect">

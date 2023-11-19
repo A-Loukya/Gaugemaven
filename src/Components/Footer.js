@@ -14,9 +14,9 @@ All rights reserved.</p>
                 </div>
                 <div>
                     <h6>ABOUT GAUGEMAVEN</h6>
-                    <p><Link>Home</Link></p>
+                    <p><Link to="/dashboard">Home</Link></p>
                     <p><Link to="/about">About Us</Link></p>
-                    <p><a>FAQ</a></p>
+                    <p><Link to="/faq">FAQ</Link></p>
                 </div>
                 <div>
                     <h6>NOT QUITE READY FOR GAUGEMAVEN?</h6>

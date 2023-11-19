@@ -1,7 +1,7 @@
 // Home.js
 import React from "react";
 import Navbar from "./Navbar";
-import logo from "../Images/logo.svg"
+import logo from "../Images/logo.svg";
 import "../css/Home.css";
 import bg from "../Images/BackGround.svg";
 import arrowRight from "../Images/Arrow-Right.svg";
@@ -22,30 +22,25 @@ const Home = () => {
       <div className="main">
         {/* navbar */}
         <nav>
-          
           <img src={logo} className="logo" />
-          <ul >
+          <ul>
             <a href="#categories">
               <li>Categories</li>
             </a>
             <a href="#features">
               <li>Features</li>
             </a>
-            <li>About</li>
+            <Link to="/about">
+              <li>About</li>
+            </Link>
           </ul>
           <Link to={`/login`}>
             <button className="register-btn">
               Log in
-              
-                <img
-                  src={arrowRight}
-                  alt="Arrow"
-                  
-                />
-              
+              <img src={arrowRight} alt="Arrow" />
             </button>
           </Link>
-          </nav>
+        </nav>
 
         {/* home section */}
         <section>
@@ -80,7 +75,7 @@ const Home = () => {
       <Categories click="login" />
       <Features />
       <Faq />
-      <Footer/>
+      <Footer />
 
       {/* <Profile/> */}
       {/* <MainCategories/> */}

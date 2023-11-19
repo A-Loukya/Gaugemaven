@@ -17,13 +17,28 @@ const Signup = () => {
     e.preventDefault();
     const details = { email, password, confirmpassword };
     console.log(details);
+    if (password !== confirmpassword) {
+      alert('Password and Confirm Password do not match.');
+      return;
+    }
     if (details) {
-      navigate("/dashboard");
+      const name = extractNameFromEmail(email);
+      console.log('Name in Signup:', name);
+  navigate('/dashboard', { state: { name } });
     } else {
-      // Handle validation errors if needed
       console.log("Please fill in the details");
     }
   };
+  const handleSignup = () => {
+    const name = extractNameFromEmail(email);
+  };
+
+
+  const extractNameFromEmail = (email) => {
+    const name = email.split('@')[0];
+    return name;
+  };
+
 
   return (
     <div className="signup-body">
@@ -76,7 +91,7 @@ const Signup = () => {
                   <span>Log in!</span>
                 </Link>
               </p>
-              <button className="signup-btn"><div className="btn-circle1"></div><span>Sign up</span><div className="btn-circle2" ></div></button>
+              <button onClick={handleSignup} className="signup-btn"><div className="btn-circle1"></div><span>Sign up</span><div className="btn-circle2" ></div></button>
             </form>
           </div>
           {/* signup-right */}

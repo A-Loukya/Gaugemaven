@@ -31,3 +31,6 @@ font-weight: 400;
 line-height: 150%; /* 25.5px */
 margin: 20px 80px 20px 30px;
 }
+.logout{
+  color: red !important;
+}
